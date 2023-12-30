@@ -5,8 +5,8 @@ pipeline {
             steps {
                                   checkout([$class: 'GitSCM', 
                           branches: [[name: '*/Java17']], // Specify the branch to checkout
-                          userRemoteConfigs: [[url: 'https://github.com/MadhuKeerthana25/Java17.git']]])
-                          credentialsId: '105178b5-afa8-4583-8e98-3e519d67864e']])
+                          userRemoteConfigs: [[url: 'https://github.com/MadhuKeerthana25/Java17.git']],
+                          credentialsId: '105178b5-afa8-4583-8e98-3e519d67864e'])
 
             }
         }
