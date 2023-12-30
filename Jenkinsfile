@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    parameters{ 
-      string defaultValue: 'Keerthana', description: 'Choose your name', name: 'name'
-}
     stages {
         stage('Checkout') {
             steps {
