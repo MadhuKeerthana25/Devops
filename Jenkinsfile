@@ -3,7 +3,10 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                  echo 'Hello, World!'
+                                  checkout([$class: 'GitSCM', 
+                          branches: [[name: '*/Java17']], // Specify the branch to checkout
+                          userRemoteConfigs: [[url: 'https://github.com/MadhuKeerthana25/Java17.git']]])
+
             }
         }
         
