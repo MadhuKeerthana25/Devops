@@ -3,25 +3,25 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout scm
+                  echo 'Hello, World!'
             }
         }
         
         stage('Build') {
             steps {
-                // Your build steps go here
+                  echo 'Hello, World!'
             }
         }
         
         stage('Test') {
             steps {
-                // Your test steps go here
+                  echo 'Hello, World!'
             }
         }
         
         stage('Deploy') {
             steps {
-                // Your deployment steps go here
+                 echo 'Hello, World!'
             }
         }
     }
