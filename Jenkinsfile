@@ -7,14 +7,16 @@ pipeline {
         stage('Checkout') {
             steps {
                     script {
-                    git url: 'https://github.com/MadhuKeerthana25/Java17.git', credentials: GIT_CREDENTIALS, branch: 'Java17'
+                    git url: 'https://github.com/MadhuKeerthana25/TestJenkins.git', credentials: GIT_CREDENTIALS, branch: 'master'
                     }
             }
         }
         
         stage('Build') {
             steps {
-                  echo 'Hello, World!'
+                  script {
+                    sh './gradlew clean build'
+                }
             }
         }
         
